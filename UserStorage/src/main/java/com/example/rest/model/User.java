@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 import static com.example.rest.config.Constants.USERNAME_OR_PASSWORD_REGEXP;
 
 @Data
-@Builder(builderMethodName = "of", buildMethodName = "create")
+@Builder(builderMethodName = "with", buildMethodName = "create")
 @EqualsAndHashCode(exclude = {"id", "plainTextPassword", "hashedPassword"})
 @ToString(exclude = {"id", "plainTextPassword", "hashedPassword"})
 @JsonIgnoreProperties(ignoreUnknown = true)
