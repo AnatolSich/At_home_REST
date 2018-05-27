@@ -9,6 +9,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.example.rest.config.Constants.USER_ALREADY_EXIST_DESCRIPTION;
+
 @Component
 public class UserStorage {
 
@@ -18,7 +20,7 @@ public class UserStorage {
     public User save(User user){
         Optional<User> persistedUser = findByUserName(user.getUserName());
         if(persistedUser.isPresent()){
-            throw new UserAlreadyExistsException(); // TODO: 19.05.2018
+            throw new UserAlreadyExistsException();
         }
         Long userId = generateId();
         user.setId(userId);
