@@ -1,5 +1,6 @@
 spring:
-  profiles: dev
+  profiles:
+   active: dev
 server:
   port: 8080
   compression:
