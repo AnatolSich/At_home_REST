@@ -32,6 +32,6 @@ public class UserController {
     @PutMapping (value = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
     public String addContact(MyContact myContact){
          contactsRepository.addContact(myContact);
-         return "redirect:/contacts";
+         return "redirect:/";
     }
 }
