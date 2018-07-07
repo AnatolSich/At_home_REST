@@ -29,7 +29,7 @@ public class UserController {
         return contactsRepository.findContactsByRegExp(regExp);
     }
 
-    @PutMapping (value = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping (value = "/add", consumes = MediaType.APPLICATION_JSON_VALUE)
     public String addContact(MyContact myContact){
          contactsRepository.addContact(myContact);
          return "redirect:/";
